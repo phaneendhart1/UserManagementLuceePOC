@@ -7,6 +7,51 @@
     <title>Edit User</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
+<style>
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .container {
+            max-width: 900px;
+            margin-top: 50px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 26px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        
+        .btn-primary {
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+            padding: 5px 10px;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+
+        .btn-delete {
+            background-color: #dc3545;
+            color: white;
+            border-radius: 5px;
+            padding: 5px 10px;
+        }
+
+        .btn-delete:hover {
+            background-color: #a71d2a;
+        }
+    </style>
+</style>
 <body>
     <cfoutput><div class="container mt-5">
         <h2>Edit User</h2>
@@ -25,7 +70,7 @@
                 <input type="email" class="form-control" id="email" name="email" value="#user.email#" required>
             </div>
             <button type="submit" class="btn btn-primary">Save</button>
-            <a href="users.cfm" class="btn btn-secondary">Cancel</a>
+            <a href="users.cfm" class="btn btn-delete">Cancel</a>
         </form>
     </div>
 </cfoutput>
