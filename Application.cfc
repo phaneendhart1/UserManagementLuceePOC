@@ -16,20 +16,4 @@ component {
         alwaysSetTimeout:true, // default: false
         validate:false, // default: false
     };
-    function onCorsRequest() {
-        // Allow all origins
-        getPageContext().getResponse().addHeader("Access-Control-Allow-Origin", "*");
-        
-        // Allowed methods
-        getPageContext().getResponse().addHeader("Access-Control-Allow-Methods", "GET,POST,PUT,DELETE,OPTIONS");
-        
-        // Allowed headers
-        getPageContext().getResponse().addHeader("Access-Control-Allow-Headers", "Content-Type,Authorization");
-        
-        // Handle preflight requests
-        if (CGI.REQUEST_METHOD == "OPTIONS") {
-            getPageContext().getResponse().setStatus(200);
-            abort;
-        }
-    }
 }    
